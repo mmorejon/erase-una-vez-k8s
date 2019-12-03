@@ -4,12 +4,12 @@
 ## vagrant parameters
 BOX = "bento/ubuntu-18.04"
 # master node parameters
-MASTER_IP = "192.168.99.10"
+MASTER_IP = "192.168.100.10"
 MASTER_CPU = "2"
 MASTER_RAM = "2048"
 # node parameters
-NODE_IP = "192.168.99."
-NODE_COUNT = 2
+NODE_IP = "192.168.100."
+NODE_COUNT = 1
 NODE_CPU = "1"
 NODE_RAM = "1024"
 # kubernetes parameters
