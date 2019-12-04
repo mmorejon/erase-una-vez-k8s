@@ -40,6 +40,7 @@ Vagrant.configure("2") do |config|
         "MASTER_IP" => MASTER_IP,
         "KUBERNETES_VERSION" => KUBERNETES_VERSION
       }
+    master.vm.synced_folder "./", "/home/vagrant/erase-una-vez-k8s"
   end
 
   # node configuration
