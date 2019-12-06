@@ -9,7 +9,7 @@ MASTER_CPU = "2"
 MASTER_RAM = "2048"
 # node parameters
 NODE_IP = "192.168.100."
-NODE_COUNT = 1
+NODE_COUNT = 2
 NODE_CPU = "1"
 NODE_RAM = "1024"
 # kubernetes parameters
