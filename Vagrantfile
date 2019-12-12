@@ -13,7 +13,7 @@ NODE_COUNT = 2
 NODE_CPU = "1"
 NODE_RAM = "1024"
 # kubernetes parameters
-KUBERNETES_VERSION = "1.16.3"
+KUBERNETES_VERSION = "1.16.4"
 KUBEADM_TOKEN = "b0sybt.xpp56ac5a1medj3n"
 
 ## general vagrant configurations
