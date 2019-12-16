@@ -8,7 +8,7 @@ El cluster de Kubernetes utilizado en el libro cuenta con:
 
 * 1 nodo master v1.16.4
 * 2 nodos
-* [Calico](https://www.projectcalico.org) para la comunicaciones y políticas de la red
+* [Calico](https://www.projectcalico.org) para las comunicaciones y políticas de red
 
 ## Requisitos previos
 
@@ -99,3 +99,7 @@ d407cfe  master virtualbox running /...../erase-una-vez-k8s
 ```
 
 Copie el fichero de configuración de Kubernetes desde el nodo master hacia el directorio `HOME` de su usuario. Si actualmente existe el fichero `~/.kube/config` le sugerimos que realice una copia del fichero antes de modificarlo.
+
+## Sugerencias y Comentarios
+
+Déjanos saber lo que estás pensando sobre el libro [Érase una vez Kubernetes](https://leanpub.com/erase-una-vez-kubernetes). Al igual que en los libros de cuentos, haremos todo lo posible por cumplir tu sueños!
