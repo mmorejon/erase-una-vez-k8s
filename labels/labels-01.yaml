@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: figure-01
+  labels:
+    name: figure-01
+spec:
+  containers:
+    - name: message
+      image: mmorejon/erase-una-vez-1:0.1.1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: figure-02
+  labels:
+    name: figure-02
+    color: red
+    shape: square
+spec:
+  containers:
+    - name: message
+      image: mmorejon/erase-una-vez-1:0.1.1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: figure-03
+  labels:
+    name: figure-03
+    color: green
+    shape: triangle
+spec:
+  containers:
+    - name: message
+      image: mmorejon/erase-una-vez-1:0.1.1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: figure-04
+  labels:
+    name: figure-04
+    color: yellow
+    shape: triangle
+spec:
+  containers:
+    - name: message
+      image: mmorejon/erase-una-vez-1:0.1.1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: figure-05
+  labels:
+    name: figure-05
+    color: blue
+    shape: square
+spec:
+  containers:
+    - name: message
+      image: mmorejon/erase-una-vez-1:0.1.1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: figure-06
+  labels:
+    name: figure-06
+    color: blue
+    shape: triangle
+spec:
+  containers:
+    - name: message
+      image: mmorejon/erase-una-vez-1:0.1.1
