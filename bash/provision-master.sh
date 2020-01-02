@@ -22,3 +22,6 @@ kubectl apply -f https://raw.githubusercontent.com/mmorejon/erase-una-vez-k8s/ma
 
 ## enable completion commands
 echo "source <(kubectl completion bash)" >> /home/vagrant/.bashrc
+
+## install bats to run tests
+apt-get install -y bats=0.4.0-1.1
