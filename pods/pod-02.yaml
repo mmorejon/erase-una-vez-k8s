@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-envs
+spec:
+  containers:
+    - name: message
+      image: mmorejon/erase-una-vez-1:0.2.0
+      env:
+        - name: CHARACTER
+          value: "un castillo."
+        - name: SLEEP_TIME
+          value: "4"
