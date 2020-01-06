@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploy-example
+  name: deploy-example-1
   labels:
-    name: example
+    name: example-1
 spec:
   replicas: 7
   selector:
     matchLabels:
-      name: example
+      name: example-1
   strategy:
     type: RollingUpdate
   template:
     metadata:
       labels:
-        name: example
+        name: example-1
     spec:
       containers:
       - image: mmorejon/erase-una-vez-1:0.2.0

@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploy-example
+  name: deploy-example-2
   labels:
-    name: example
+    name: example-2
 spec:
   replicas: 10
   selector:
     matchLabels:
-      name: example
+      name: example-2
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        name: example
+        name: example-2
     spec:
       containers:
-      - image: mmorejon/erase-una-vez-1:bad-tag
+      - image: mmorejon/erase-una-vez-1:0.2.0
         name: erase-una-vez-1
         env:
           - name: CHARACTER
-            value: "un elfo."
+            value: "un duende."
