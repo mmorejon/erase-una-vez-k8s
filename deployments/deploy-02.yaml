@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-example-2
+  labels:
+    name: example-2
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      name: example-2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 10%
+      maxSurge: 10%
+  template:
+    metadata:
+      labels:
+        name: example-2
+    spec:
+      containers:
+      - image: mmorejon/erase-una-vez-1:0.2.0
+        name: erase-una-vez-1
+        env:
+          - name: CHARACTER
+            value: "un elfo."
