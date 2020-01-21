@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: mmorejon/erase-una-vez-2:latest
+          image: mmorejon/erase-una-vez-2:0.1.0
           command:
             - server
           ports:
