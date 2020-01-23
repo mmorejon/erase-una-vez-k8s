@@ -22,3 +22,6 @@ kubectl apply -f https://raw.githubusercontent.com/mmorejon/erase-una-vez-k8s/ma
 
 ## enable completion commands
 echo "source <(kubectl completion bash)" >> /home/vagrant/.bashrc
+
+## add kubexercises alias
+echo "alias kubexercises='docker container run --rm -it -v /home/vagrant/.kube/config:/kubeconfig mmorejon/kubexercises:0.1.0'" >> /home/vagrant/.bashrc

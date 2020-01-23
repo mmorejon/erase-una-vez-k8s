@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-04
+  labels:
+    app: server-04
+    example: fourth
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: server-04
+  template:
+    metadata:
+      labels:
+        app: server-04
+        example: fourth
+    spec:
+      containers:
+        - name: server
+          image: mmorejon/erase-una-vez-2:0.1.0
+          command:
+            - server
+          ports:
+            - name: http-server
+              containerPort: 8000
