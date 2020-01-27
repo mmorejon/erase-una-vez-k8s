@@ -25,7 +25,7 @@ echo "source <(kubectl completion bash)" >> /home/vagrant/.bashrc
 
 ## setup kubexercises
 curl -fsSL -o kubexercises.tar.gz https://kubexercises.s3-eu-west-1.amazonaws.com/v0.1.1/kubexercises_0.1.1_linux_amd64.tar.gz
-tar -zxvf kubexercises.tar.gz
+tar -zxf kubexercises.tar.gz
 mv kubexercises /usr/local/bin/kubexercises
 rm kubexercises.tar.gz
 
