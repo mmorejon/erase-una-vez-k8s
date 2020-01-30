@@ -1,0 +1,57 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ing-01
+  labels:
+    app: ing-01
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /ing-01(/|$)(.*)
+            backend:
+              serviceName: ing-01
+              servicePort: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ing-01
+  labels:
+    app: ing-01
+spec:
+  type: ClusterIP
+  selector:
+    app: ing-01
+  ports:
+    - name: http
+      port: 8000
+      protocol: TCP
+      targetPort: http-server
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ing-01
+  labels:
+    app: ing-01
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ing-01
+  template:
+    metadata:
+      labels:
+        app: ing-01
+    spec:
+      containers:
+        - name: server
+          image: mmorejon/erase-una-vez-2:0.1.0
+          command:
+            - server
+          ports:
+            - name: http-server
+              containerPort: 8000
