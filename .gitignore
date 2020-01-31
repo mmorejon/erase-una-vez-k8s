@@ -4,6 +4,9 @@
 # Activities folder
 activities
 
+# Tests folder
+tests
+
 # Log files (if you are creating logs in debug mode, uncomment this)
 # *.log
 
