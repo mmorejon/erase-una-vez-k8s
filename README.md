@@ -49,9 +49,9 @@ vagrant up
 
 La construcción del cluster demora aproximadamente 5 minutos. El tiempo puede variar en dependencia de la velocidad de red.
 
-### Mire el video
+### Video de la instalación
 
-[![asciicast](https://asciinema.org/a/296160.svg)](https://asciinema.org/a/296160)
+[![asciicast](https://asciinema.org/a/297390.svg)](https://asciinema.org/a/297390)
 
 ## Practicar dentro del nodo master
 
