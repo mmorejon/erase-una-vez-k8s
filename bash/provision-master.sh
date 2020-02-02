@@ -23,5 +23,16 @@ kubectl apply -f https://raw.githubusercontent.com/mmorejon/erase-una-vez-k8s/ma
 ## enable completion commands
 echo "source <(kubectl completion bash)" >> /home/vagrant/.bashrc
 
-## add kubexercises alias
-echo "alias kubexercises='docker container run --rm -it -v /home/vagrant/.kube/config:/kubeconfig mmorejon/kubexercises:0.1.0'" >> /home/vagrant/.bashrc
+## setup kubexercises
+curl -fsSL -o kubexercises.tar.gz https://kubexercises.s3-eu-west-1.amazonaws.com/v0.1.1/kubexercises_0.1.1_linux_amd64.tar.gz
+tar -zxf kubexercises.tar.gz
+mv kubexercises /usr/local/bin/kubexercises
+rm kubexercises.tar.gz
+
+## start load balance
+docker container run --rm \
+  --detach \
+  -v /home/vagrant/erase-una-vez-k8s/lb/envoy.yaml:/etc/envoy/envoy.yaml \
+  -p 80:80 \
+  -p 443:443 \
+  envoyproxy/envoy-alpine:v1.13.0 > /dev/null 2>&1

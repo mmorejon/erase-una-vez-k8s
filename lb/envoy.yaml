@@ -1,0 +1,65 @@
+admin:
+  access_log_path: /tmp/admin_access.log
+  address:
+    socket_address: { address: 0.0.0.0, port_value: 9901 }
+
+static_resources:
+  listeners:
+    - name: listener_0
+      address:
+        socket_address: { address: 0.0.0.0, port_value: 80 }
+      filter_chains:
+      - filters:
+        - name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.config.filter.network.http_connection_manager.v2.HttpConnectionManager
+            stat_prefix: ingress_http
+            codec_type: AUTO
+            route_config:
+              name: local_route
+              virtual_hosts:
+              - name: local_service
+                domains: ["*"]
+                routes:
+                - match: { prefix: "/" }
+                  route: { cluster: http }
+            http_filters:
+            - name: envoy.router
+    - name: listener_0
+      address:
+        socket_address: { address: 0.0.0.0, port_value: 443 }
+      filter_chains:
+      - filters:
+        - name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.config.filter.network.http_connection_manager.v2.HttpConnectionManager
+            stat_prefix: ingress_http
+            codec_type: AUTO
+            route_config:
+              name: local_route
+              virtual_hosts:
+              - name: local_service
+                domains: ["*"]
+                routes:
+                - match: { prefix: "/" }
+                  route: { cluster: https }
+            http_filters:
+            - name: envoy.router
+
+  clusters:
+    - name: http
+      connect_timeout: 0.25s
+      type: STRICT_DNS
+      dns_lookup_family: V4_ONLY
+      lb_policy: ROUND_ROBIN
+      hosts: [
+        { socket_address: { address: 192.168.100.10, port_value: 30080 }}
+      ]
+    - name: https
+      connect_timeout: 0.25s
+      type: STRICT_DNS
+      dns_lookup_family: V4_ONLY
+      lb_policy: ROUND_ROBIN
+      hosts: [
+        { socket_address: { address: 192.168.100.10, port_value: 30443 }}
+      ]
