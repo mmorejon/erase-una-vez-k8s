@@ -6,7 +6,7 @@ Para aprender y practicar Kubernetes hay que tener un cluster, y si este cluster
 
 El cluster de Kubernetes utilizado en el libro cuenta con:
 
-* 1 nodo master v1.16.4
+* 1 nodo master v1.17.2
 * 2 nodos
 * [Calico](https://www.projectcalico.org) para las comunicaciones y políticas de red
 
@@ -75,9 +75,9 @@ Deberá obtener un resultado similar al siguiente:
 
 ```bash
 NAME     STATUS   ROLES    AGE     VERSION
-master   Ready    master   7m37s   v1.16.4
-node1    Ready    <none>   5m8s    v1.16.4
-node2    Ready    <none>   2m46s   v1.16.4
+master   Ready    master   7m37s   v1.17.2
+node1    Ready    <none>   5m8s    v1.17.2
+node2    Ready    <none>   2m46s   v1.17.2
 ```
 
 ## Practicar fuera del nodo master
