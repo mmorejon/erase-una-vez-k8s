@@ -13,14 +13,14 @@ NODE_COUNT = 2
 NODE_CPU = "1"
 NODE_RAM = "1024"
 # kubernetes parameters
-KUBERNETES_VERSION = "1.17.2"
+KUBERNETES_VERSION = "1.18.0"
 KUBEADM_TOKEN = "b0sybt.xpp56ac5a1medj3n"
 
 ## general vagrant configurations
 Vagrant.configure("2") do |config|
   config.vm.box = BOX
   config.vm.box_check_update = false
-  config.vm.box_version = "201910.20.0"
+  config.vm.box_version = "202003.31.0"
   config.vm.provision "shell", :path => "bash/provision-base.sh",
     env: {
       "KUBERNETES_VERSION" => KUBERNETES_VERSION
