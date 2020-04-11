@@ -31,7 +31,7 @@ spec:
         kubernetes.io/hostname: node1
       containers:
         - name: example-06
-          image: mmorejon/erase-una-vez-3:0.1.2
+          image: mmorejon/erase-una-vez-3:0.1.0
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: my-volume
@@ -39,4 +39,4 @@ spec:
       volumes:
         - name: my-volume
           persistentVolumeClaim:
-              claimName: pv-claim-02
+            claimName: pv-claim-02
