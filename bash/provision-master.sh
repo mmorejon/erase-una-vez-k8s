@@ -36,3 +36,6 @@ docker container run --rm \
   -p 80:80 \
   -p 443:443 \
   envoyproxy/envoy-alpine:v1.13.0 > /dev/null 2>&1
+
+## create alias to clean the cluster
+echo "alias clean-cluster=/home/vagrant/erase-una-vez-k8s/bash/clean-cluster.sh" >> /home/vagrant/.bashrc
