@@ -16,5 +16,6 @@ kubectl --namespace default delete -f $BASEDIR/ingress/ $COMMON_FLAGS
 kubectl delete -f $BASEDIR/namespaces/ $COMMON_FLAGS
 kubectl delete -f $BASEDIR/volumes/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/configmaps/ $COMMON_FLAGS
+kubectl --namespace default delete -f $BASEDIR/secrets/ $COMMON_FLAGS
 
 printf '\nHa terminado el proceso de limpieza en el cluster.\n'
