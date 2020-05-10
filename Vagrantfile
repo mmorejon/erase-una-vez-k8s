@@ -3,6 +3,7 @@
 
 ## vagrant parameters
 BOX = "bento/ubuntu-18.04"
+BOX_VERSION = "202003.31.0"
 # master node parameters
 MASTER_IP = "192.168.100.10"
 MASTER_CPU = "2"
@@ -20,7 +21,7 @@ KUBEADM_TOKEN = "b0sybt.xpp56ac5a1medj3n"
 Vagrant.configure("2") do |config|
   config.vm.box = BOX
   config.vm.box_check_update = false
-  config.vm.box_version = "202003.31.0"
+  config.vm.box_version = BOX_VERSION
   config.vm.provision "shell", :path => "bash/provision-base.sh",
     env: {
       "KUBERNETES_VERSION" => KUBERNETES_VERSION
