@@ -39,6 +39,8 @@ docker container run --rm \
 
 ## create alias to clean the cluster
 echo "alias clean-cluster=/home/vagrant/erase-una-vez-k8s/bash/clean-cluster.sh" >> /home/vagrant/.bashrc
+## create alias to generate user configurations
+echo "alias create-user=/home/vagrant/erase-una-vez-k8s/bash/create-user.sh" >> /home/vagrant/.bashrc
 
 ## remove RANDFILE configuration for openssl to avoid a warning message
 ## https://github.com/openssl/openssl/issues/7754
