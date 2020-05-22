@@ -44,6 +44,7 @@ EOF
 ## install docker, kubernetes, kubectl and kubeadm
 apt-get update && apt-get install -y \
   docker-ce=5:18.09.9~3-0~ubuntu-bionic \
+  docker-ce-cli=5:18.09.9~3-0~ubuntu-bionic \
   kubelet=${KUBERNETES_VERSION}-00 \
   kubeadm=${KUBERNETES_VERSION}-00 \
   kubectl=${KUBERNETES_VERSION}-00
