@@ -39,7 +39,6 @@ spec:
       containers:
         - name: server
           image: mmorejon/erase-una-vez-2:0.2.1
-          imagePullPolicy: Always
           command:
             - server
           ports:
@@ -71,7 +70,6 @@ spec:
       containers:
         - name: client
           image: mmorejon/erase-una-vez-2:0.2.1
-          imagePullPolicy: Always
           command:
             - client
           env:
