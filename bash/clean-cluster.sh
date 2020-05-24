@@ -22,5 +22,6 @@ kubectl --namespace default delete -f $BASEDIR/configmaps/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/secrets/ $COMMON_FLAGS
 kubectl delete -f $BASEDIR/rbac/ $COMMON_FLAGS
 rm --force $BASEDIR/rbac/mmorejon*
+kubectl --namespace default delete -f $BASEDIR/hpa/ $COMMON_FLAGS
 
 printf '\nHa terminado el proceso de limpieza en el cluster.\n'
