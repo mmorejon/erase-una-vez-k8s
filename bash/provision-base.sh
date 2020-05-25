@@ -51,7 +51,7 @@ apt-get update && apt-get install -y \
 
 ## setup node ip into kubelet configuration
 ## https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#check-network-adapters
-IPADDR=`ifconfig eth1 | grep -i Mask | awk '{print $2}'| cut -f2 -d:`
+IPADDR=`ip -4 addr show eth1 | grep inet |  awk '{print $2}' | cut -f1 -d/`
 sed -i '/\[Service\]/a Environment="KUBELET_EXTRA_ARGS=--node-ip='$IPADDR'"' /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 systemctl daemon-reload
 systemctl restart kubelet
