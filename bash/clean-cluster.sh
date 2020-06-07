@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# base dir
+# general values
 BASEDIR='/home/vagrant/erase-una-vez-k8s'
 COMMON_FLAGS='--ignore-not-found=true'
 
