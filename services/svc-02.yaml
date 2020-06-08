@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: mmorejon/erase-una-vez-2:0.1.0
+          image: mmorejon/erase-una-vez-2:0.2.1
           command:
             - server
           ports:
@@ -64,7 +64,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: mmorejon/erase-una-vez-2:0.1.0
+          image: mmorejon/erase-una-vez-2:0.2.1
           command:
             - client
           env:
@@ -73,4 +73,4 @@ spec:
             - name: ENDPOINT
               value: "/echo"
             - name: SLEEP_TIME
-              value: "3"
+              value: "3s"
