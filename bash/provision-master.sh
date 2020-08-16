@@ -29,7 +29,7 @@ tar -zxf kubexercises.tar.gz
 mv kubexercises /usr/local/bin/kubexercises
 rm kubexercises.tar.gz
 
-curl -fsSL -o ke.tar.gz https://kubexercises.s3-eu-west-1.amazonaws.com/v0.2.2/ke_0.2.2_linux_amd64.tar.gz
+curl -fsSL -o ke.tar.gz https://kubexercises.s3-eu-west-1.amazonaws.com/v0.3.0/ke_0.3.0_linux_amd64.tar.gz
 tar -zxf ke.tar.gz
 mv ke /usr/local/bin/ke
 rm ke.tar.gz
