@@ -18,7 +18,7 @@ sudo cp -Rf /etc/kubernetes/admin.conf /home/vagrant/.kube/config
 sudo chown -R vagrant:vagrant /home/vagrant/.kube
 
 ## install calico
-kubectl apply -f https://raw.githubusercontent.com/mmorejon/erase-una-vez-k8s/master/calico/calico.yaml
+kubectl apply -f https://raw.githubusercontent.com/mmorejon/erase-una-vez-k8s/main/calico/calico.yaml
 
 ## enable completion commands
 echo "source <(kubectl completion bash)" >> /home/vagrant/.bashrc
