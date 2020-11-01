@@ -6,14 +6,14 @@ Para aprender y practicar Kubernetes hay que tener un cluster, y si este cluster
 
 El cluster de Kubernetes utilizado en el libro cuenta con:
 
-* 1 nodo master v1.18.3
+* 1 nodo master v1.19.3
 * 2 nodos
 * [Calico](https://www.projectcalico.org) para las comunicaciones y políticas de red
 
 ## Requisitos previos
 
-* Tener instalado [VirtualBox](https://www.virtualbox.org/wiki/Downloads)  `>= 6.1.8`
-* Tener instalado [Vagrant](https://www.vagrantup.com/downloads.html) `>= 2.2.9`
+* Tener instalado [VirtualBox](https://www.virtualbox.org/wiki/Downloads)  `>= 6.1.16`
+* Tener instalado [Vagrant](https://www.vagrantup.com/downloads.html) `>= 2.2.10`
 
 ## Configuración del cluster
 
@@ -28,7 +28,7 @@ NODE_COUNT = 2
 NODE_CPU = "1"
 NODE_RAM = "1024"
 # kubernetes parameters
-KUBERNETES_VERSION = "1.18.3"
+KUBERNETES_VERSION = "1.19.3"
 ```
 
 ## Instalación
@@ -75,9 +75,9 @@ Deberá obtener un resultado similar al siguiente:
 
 ```bash
 NAME     STATUS   ROLES    AGE     VERSION
-master   Ready    master   7m37s   v1.18.3
-node1    Ready    <none>   5m8s    v1.18.3
-node2    Ready    <none>   2m46s   v1.18.3
+master   Ready    master   7m37s   v1.19.3
+node1    Ready    <none>   5m8s    v1.19.3
+node2    Ready    <none>   2m46s   v1.19.3
 ```
 
 ## Practicar fuera del nodo master
