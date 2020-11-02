@@ -17,7 +17,7 @@ spec:
         name: example-1
     spec:
       containers:
-      - image: mmorejon/erase-una-vez-1:0.2.0
+      - image: mmorejon/erase-una-vez-1:0.2.1
         name: erase-una-vez-1
         env:
           - name: CHARACTER

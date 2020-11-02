@@ -5,9 +5,9 @@ metadata:
 spec:
   containers:
     - name: message
-      image: mmorejon/erase-una-vez-1:0.2.0
+      image: mmorejon/erase-una-vez-1:0.2.1
       env:
         - name: CHARACTER
           value: "un castillo."
         - name: SLEEP_TIME
-          value: "4"
+          value: "4s"
