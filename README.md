@@ -51,7 +51,7 @@ La construcción del cluster demora aproximadamente 5 minutos. El tiempo puede v
 
 ### Video de la instalación
 
-[![asciicast](https://asciinema.org/a/335145.svg)](https://asciinema.org/a/335145)
+[![asciicast](https://asciinema.org/a/370729.svg)](https://asciinema.org/a/370729)
 
 ## Practicar dentro del nodo master
 
