@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ing-02
@@ -12,9 +12,12 @@ spec:
       http:
         paths:
           - path: /
+            pathType: Prefix
             backend:
-              serviceName: ing-02
-              servicePort: http
+              service:
+                name: ing-02
+                port:
+                  name: http
 ---
 apiVersion: v1
 kind: Service

@@ -16,6 +16,7 @@ kubectl --namespace default delete -f $BASEDIR/replicasets/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/deployments/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/services/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/ingress/ $COMMON_FLAGS
+kubectl delete namespace ingress-nginx $COMMON_FLAGS
 kubectl delete -f $BASEDIR/namespaces/ $COMMON_FLAGS
 kubectl delete -f $BASEDIR/volumes/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/configmaps/ $COMMON_FLAGS

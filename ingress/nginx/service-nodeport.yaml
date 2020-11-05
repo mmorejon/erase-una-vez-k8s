@@ -5,7 +5,8 @@ metadata:
   namespace: ingress-nginx
   labels:
     app.kubernetes.io/name: ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
+    app.kubernetes.io/instance: ingress-nginx
+    app.kubernetes.io/component: controller
 spec:
   type: NodePort
   ports:
@@ -21,7 +22,5 @@ spec:
       nodePort: 30443
   selector:
     app.kubernetes.io/name: ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-
----
-
+    app.kubernetes.io/instance: ingress-nginx
+    app.kubernetes.io/component: controller
