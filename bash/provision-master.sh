@@ -29,14 +29,6 @@ tar -zxf ke.tar.gz
 mv ke /usr/local/bin/ke
 rm ke.tar.gz
 
-## start load balance
-docker container run --restart unless-stopped \
-  --detach \
-  -v /home/vagrant/erase-una-vez-k8s/lb/envoy.yaml:/etc/envoy/envoy.yaml \
-  -p 80:80 \
-  -p 443:443 \
-  envoyproxy/envoy-alpine:v1.13.0 > /dev/null 2>&1
-
 ## Replaces line endings
 echo "sed -i -e 's/\r$//' /home/vagrant/erase-una-vez-k8s/bash/clean-cluster.sh" >> /home/vagrant/.bashrc
 echo "sed -i -e 's/\r$//' /home/vagrant/erase-una-vez-k8s/bash/create-user.sh" >> /home/vagrant/.bashrc
