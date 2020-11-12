@@ -30,7 +30,7 @@ mv ke /usr/local/bin/ke
 rm ke.tar.gz
 
 ## start load balance
-docker container run --rm \
+docker container run --restart unless-stopped \
   --detach \
   -v /home/vagrant/erase-una-vez-k8s/lb/envoy.yaml:/etc/envoy/envoy.yaml \
   -p 80:80 \
