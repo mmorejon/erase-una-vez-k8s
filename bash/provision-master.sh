@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 ## initialize kubernetes cluster
-kubeadm init \
-  --kubernetes-version ${KUBERNETES_VERSION} \
-  --apiserver-advertise-address ${MASTER_IP} \
-  --pod-network-cidr 10.244.0.0/16 \
-  --token ${KUBEADM_TOKEN}
+envsubst < ${REPO_PATH}/cluster/default-master.yaml > ${REPO_PATH}/cluster/master.yaml
+kubeadm init --config ${REPO_PATH}/cluster/master.yaml
+rm ${REPO_PATH}/cluster/master.yaml
 
 ## setup kubeconfig file for root user
 mkdir -p $HOME/.kube
@@ -30,13 +28,13 @@ mv ke /usr/local/bin/ke
 rm ke.tar.gz
 
 ## Replaces line endings
-echo "sed -i -e 's/\r$//' /home/vagrant/erase-una-vez-k8s/bash/clean-cluster.sh" >> /home/vagrant/.bashrc
-echo "sed -i -e 's/\r$//' /home/vagrant/erase-una-vez-k8s/bash/create-user.sh" >> /home/vagrant/.bashrc
+echo "sed -i -e 's/\r$//' ${REPO_PATH}/bash/clean-cluster.sh" >> /home/vagrant/.bashrc
+echo "sed -i -e 's/\r$//' ${REPO_PATH}/bash/create-user.sh" >> /home/vagrant/.bashrc
 
 ## create alias to clean the cluster
-echo "alias clean-cluster=/home/vagrant/erase-una-vez-k8s/bash/clean-cluster.sh" >> /home/vagrant/.bashrc
+echo "alias clean-cluster=${REPO_PATH}/bash/clean-cluster.sh" >> /home/vagrant/.bashrc
 ## create alias to generate user configurations
-echo "alias create-user=/home/vagrant/erase-una-vez-k8s/bash/create-user.sh" >> /home/vagrant/.bashrc
+echo "alias create-user=${REPO_PATH}/bash/create-user.sh" >> /home/vagrant/.bashrc
 
 ## remove RANDFILE configuration for openssl to avoid a warning message
 ## https://github.com/openssl/openssl/issues/7754
