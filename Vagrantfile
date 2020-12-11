@@ -16,6 +16,8 @@ NODE_RAM = "1024"
 # kubernetes parameters
 KUBERNETES_VERSION = "1.19.3"
 KUBEADM_TOKEN = "b0sybt.xpp56ac5a1medj3n"
+# repository parameters
+REPO_PATH = "/home/vagrant/erase-una-vez-k8s"
 
 ## general vagrant configurations
 Vagrant.configure("2") do |config|
@@ -39,11 +41,12 @@ Vagrant.configure("2") do |config|
       env: {
         "KUBEADM_TOKEN" => KUBEADM_TOKEN,
         "MASTER_IP" => MASTER_IP,
-        "KUBERNETES_VERSION" => KUBERNETES_VERSION
+        "KUBERNETES_VERSION" => KUBERNETES_VERSION,
+        "REPO_PATH" => REPO_PATH
       }
     master.vm.provision :shell, :path => "bash/provision-load-balancer.sh",
       run: "always"
-    master.vm.synced_folder "./", "/home/vagrant/erase-una-vez-k8s"
+    master.vm.synced_folder "./", REPO_PATH
   end
 
   # node configuration
@@ -58,8 +61,7 @@ Vagrant.configure("2") do |config|
       node.vm.provision :shell, :path => "bash/provision-node.sh",
         env: {
           "KUBEADM_TOKEN" => KUBEADM_TOKEN,
-          "MASTER_IP" => MASTER_IP,
-          "KUBERNETES_VERSION" => KUBERNETES_VERSION
+          "MASTER_IP" => MASTER_IP
         }
     end
   end
