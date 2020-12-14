@@ -12,6 +12,8 @@ bootstrapTokens:
 localAPIEndpoint:
   advertiseAddress: ${MASTER_IP}
   bindPort: 6443
+nodeRegistration:
+  criSocket: unix:///run/containerd/containerd.sock
 ---
 apiVersion: kubeadm.k8s.io/v1beta2
 kind: ClusterConfiguration
@@ -22,3 +24,7 @@ apiServer:
 certificatesDir: /etc/kubernetes/pki
 networking:
   podSubnet: 10.244.0.0/16
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+cgroupDriver: systemd

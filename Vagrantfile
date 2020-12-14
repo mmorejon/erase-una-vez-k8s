@@ -14,7 +14,7 @@ NODE_COUNT = 2
 NODE_CPU = "1"
 NODE_RAM = "1024"
 # kubernetes parameters
-KUBERNETES_VERSION = "1.19.3"
+KUBERNETES_VERSION = "1.20.0"
 KUBEADM_TOKEN = "b0sybt.xpp56ac5a1medj3n"
 # repository parameters
 REPO_PATH = "/home/vagrant/erase-una-vez-k8s"
@@ -61,8 +61,11 @@ Vagrant.configure("2") do |config|
       node.vm.provision :shell, :path => "bash/provision-node.sh",
         env: {
           "KUBEADM_TOKEN" => KUBEADM_TOKEN,
-          "MASTER_IP" => MASTER_IP
+          "MASTER_IP" => MASTER_IP,
+          "REPO_PATH" => REPO_PATH
         }
+        # mount cluster folder
+        node.vm.synced_folder "./cluster", "#{REPO_PATH}/cluster"
     end
   end
 
