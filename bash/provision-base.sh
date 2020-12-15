@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # install dependencies
-apt-get update && apt-get install -y \
+apt-get update && apt-get install -y --no-install-recommends \
   apt-transport-https \
   ca-certificates \
   curl \
@@ -61,7 +61,7 @@ EOF
 sysctl --system
 
 # install docker, containerd, kubernetes, kubectl and kubeadm
-apt-get update && apt-get install -y \
+apt-get update && apt-get install -y --no-install-recommends \
   containerd.io=1.4.3-1 \
   docker-ce=5:19.03.9~3-0~ubuntu-focal \
   docker-ce-cli=5:19.03.9~3-0~ubuntu-focal \
