@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-## start load balance
+# start load balance
 docker container run --restart unless-stopped \
   --detach \
   -v /home/vagrant/erase-una-vez-k8s/lb/envoy.yaml:/etc/envoy/envoy.yaml \

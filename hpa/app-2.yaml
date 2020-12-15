@@ -11,9 +11,9 @@ spec:
   selector:
     app: app-server-1
   ports:
-  - port: 8000
-    protocol: TCP
-    targetPort: http-server
+    - port: 8000
+      protocol: TCP
+      targetPort: http-server
 
 ---
 apiVersion: apps/v1
@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: mmorejon/erase-una-vez-2:0.2.1
+          image: ghcr.io/mmorejon/erase-una-vez-2:v0.2.1
           command:
             - server
           ports:
@@ -76,7 +76,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: mmorejon/erase-una-vez-2:0.2.1
+          image: ghcr.io/mmorejon/erase-una-vez-2:v0.2.1
           command:
             - client
           env:

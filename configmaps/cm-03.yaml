@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: container-01
-          image: mmorejon/erase-una-vez-1:0.2.1
+          image: ghcr.io/mmorejon/erase-una-vez-1:v0.2.1
           imagePullPolicy: IfNotPresent
           envFrom:
             - configMapRef:

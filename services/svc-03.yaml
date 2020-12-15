@@ -10,10 +10,10 @@ spec:
   selector:
     app: server-03
   ports:
-  - port: 8000
-    protocol: TCP
-    targetPort: http-server
-    nodePort: 30000
+    - port: 8000
+      protocol: TCP
+      targetPort: http-server
+      nodePort: 30000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: mmorejon/erase-una-vez-2:0.2.1
+          image: ghcr.io/mmorejon/erase-una-vez-2:v0.2.1
           command:
             - server
           ports:
