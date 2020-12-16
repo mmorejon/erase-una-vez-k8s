@@ -6,7 +6,7 @@ metadata:
     app: cm-03
 data:
   CHARACTER: "un palacio."
-  SLEEP_TIME: "5"
+  SLEEP_TIME: "5s"
 
 ---
 apiVersion: apps/v1
