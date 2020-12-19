@@ -18,7 +18,7 @@ spec:
         kubernetes.io/hostname: node1
       containers:
         - name: example-01
-          image: mmorejon/erase-una-vez-3:0.1.0
+          image: ghcr.io/mmorejon/erase-una-vez-3:v0.1.0
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: my-volume
