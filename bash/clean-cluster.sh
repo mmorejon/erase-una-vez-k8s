@@ -20,7 +20,7 @@ kubectl --namespace default delete -f $BASEDIR/ingress/ $COMMON_FLAGS
 kubectl delete namespace ingress-nginx $COMMON_FLAGS
 kubectl delete -f $BASEDIR/namespaces/ $COMMON_FLAGS
 kubectl delete -f $BASEDIR/volumes/ $COMMON_FLAGS
-# kubectl --namespace default delete -f $BASEDIR/configmaps/ $COMMON_FLAGS
+kubectl --namespace default delete -f $BASEDIR/configmaps/ $COMMON_FLAGS
 # kubectl --namespace default delete -f $BASEDIR/secrets/ $COMMON_FLAGS
 # rm --force $BASEDIR/secrets/tls.*
 # kubectl delete -f $BASEDIR/rbac/ $COMMON_FLAGS
