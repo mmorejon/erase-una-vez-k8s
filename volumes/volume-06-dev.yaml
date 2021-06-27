@@ -28,10 +28,10 @@ spec:
         app: volume-06
     spec:
       nodeSelector:
-        kubernetes.io/hostname: node1
+        kubernetes.io/hostname: book-worker
       containers:
         - name: example-06
-          image: ghcr.io/mmorejon/erase-una-vez-3:v0.1.0
+          image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.0
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: my-volume
