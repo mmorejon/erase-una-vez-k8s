@@ -26,7 +26,7 @@ rm -f $BASEDIR/secrets/tls.*
 kubectl delete -f $BASEDIR/rbac/ $COMMON_FLAGS
 rm -f $BASEDIR/rbac/mmorejon*
 rm -f $BASEDIR/rbac/ca*
-# kubectl --namespace default delete -f $BASEDIR/hpa/ $COMMON_FLAGS
-# kubectl delete -f $BASEDIR/metrics-server/ $COMMON_FLAGS
+kubectl --namespace default delete -f $BASEDIR/hpa/ $COMMON_FLAGS
+kubectl delete -f $BASEDIR/metrics-server/ $COMMON_FLAGS
 
 printf '\nHa terminado el proceso de limpieza en el cluster.\n'
