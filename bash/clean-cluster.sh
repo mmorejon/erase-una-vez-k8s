@@ -22,9 +22,10 @@ kubectl delete -f $BASEDIR/namespaces/ $COMMON_FLAGS
 kubectl delete -f $BASEDIR/volumes/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/configmaps/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/secrets/ $COMMON_FLAGS
-rm $BASEDIR/secrets/tls.*
-# kubectl delete -f $BASEDIR/rbac/ $COMMON_FLAGS
-# rm --force $BASEDIR/rbac/mmorejon*
+rm -f $BASEDIR/secrets/tls.*
+kubectl delete -f $BASEDIR/rbac/ $COMMON_FLAGS
+rm -f $BASEDIR/rbac/mmorejon*
+rm -f $BASEDIR/rbac/ca*
 # kubectl --namespace default delete -f $BASEDIR/hpa/ $COMMON_FLAGS
 # kubectl delete -f $BASEDIR/metrics-server/ $COMMON_FLAGS
 

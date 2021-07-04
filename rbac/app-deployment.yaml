@@ -20,4 +20,4 @@ spec:
       serviceAccountName: developer
       containers:
         - name: erase-una-vez-4
-          image: ghcr.io/mmorejon/erase-una-vez-4:v0.1.0
+          image: ghcr.io/mmorejon/erase-una-vez-4:v0.2.0

@@ -10,17 +10,17 @@ openssl req -new \
 -key ${FOLDER}/${USERNAME}.key -out ${FOLDER}/${USERNAME}.csr \
 -subj "/CN=${USERNAME}/O=${GROUP}"
 
-sudo openssl x509 -req -days 365 \
+openssl x509 -req -days 365 \
   -in ${FOLDER}/${USERNAME}.csr \
-  -CA /etc/kubernetes/pki/ca.crt \
-  -CAkey /etc/kubernetes/pki/ca.key \
+  -CA rbac/ca.crt \
+  -CAkey rbac/ca.key \
   -CAcreateserial \
   -out ${FOLDER}/${USERNAME}.crt
 
 kubectl --kubeconfig=${FOLDER}/${USERNAME}-config \
   config set-cluster kubernetes \
-  --server https://192.168.100.10:6443 \
-  --certificate-authority=/etc/kubernetes/pki/ca.crt \
+  --server https://127.0.0.1:6443 \
+  --certificate-authority=rbac/ca.crt \
   --embed-certs=true
 
 kubectl --kubeconfig=${FOLDER}/${USERNAME}-config \
