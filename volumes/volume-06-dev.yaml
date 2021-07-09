@@ -5,6 +5,7 @@ metadata:
   labels:
     app: volume-06
 spec:
+  storageClassName: ""
   accessModes:
     - ReadWriteOnce
   resources:
