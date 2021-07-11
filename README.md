@@ -26,6 +26,8 @@ El cluster de Kubernetes utilizado en el libro cuenta con:
 
 ### Crear cluster
 
+Las configuraciones del cluster se encuentran en el fichero `cluster/kind-config.yaml`.
+
 ```bash
 {
   git clone https://github.com/mmorejon/erase-una-vez-k8s.git
