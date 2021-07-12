@@ -6,6 +6,7 @@ metadata:
     app: volume-04
     type: local
 spec:
+  storageClassName: ""
   capacity:
     storage: 5Mi
   accessModes:

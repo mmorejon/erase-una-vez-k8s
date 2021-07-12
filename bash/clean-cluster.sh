@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # general values
-BASEDIR='/home/vagrant/erase-una-vez-k8s'
+#BASEDIR='/home/vagrant/erase-una-vez-k8s'
+BASEDIR=$(PWD)
 COMMON_FLAGS='--ignore-not-found=true'
 
 printf 'Iniciando el proceso de limpieza en el cluster ... \n'
@@ -21,9 +22,10 @@ kubectl delete -f $BASEDIR/namespaces/ $COMMON_FLAGS
 kubectl delete -f $BASEDIR/volumes/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/configmaps/ $COMMON_FLAGS
 kubectl --namespace default delete -f $BASEDIR/secrets/ $COMMON_FLAGS
-rm --force $BASEDIR/secrets/tls.*
+rm -f $BASEDIR/secrets/tls.*
 kubectl delete -f $BASEDIR/rbac/ $COMMON_FLAGS
-rm --force $BASEDIR/rbac/mmorejon*
+rm -f $BASEDIR/rbac/mmorejon*
+rm -f $BASEDIR/rbac/ca*
 kubectl --namespace default delete -f $BASEDIR/hpa/ $COMMON_FLAGS
 kubectl delete -f $BASEDIR/metrics-server/ $COMMON_FLAGS
 
