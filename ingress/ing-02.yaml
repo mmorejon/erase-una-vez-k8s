@@ -4,11 +4,10 @@ metadata:
   name: ing-02
   labels:
     app: ing-02
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
-    - host: ing-02.io
+    - host: ing-02-127-0-0-1.nip.io
       http:
         paths:
           - path: /
