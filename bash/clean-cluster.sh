@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # general values
-BASEDIR=$(PWD)
+BASEDIR=$(pwd)
 FLAGS='--ignore-not-found=true'
 
 printf 'Iniciando el proceso de limpieza en el cluster ... \n'
