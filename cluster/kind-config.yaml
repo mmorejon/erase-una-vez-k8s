@@ -6,7 +6,7 @@ networking:
   apiServerPort: 6443
 nodes:
 - role: control-plane
-  image: kindest/node:v1.27.1@sha256:9915f5629ef4d29f35b478e819249e89cfaffcbfeebda4324e5c01d53d937b09
+  image: kindest/node:v1.29.0@sha256:eaa1450915475849a73a9227b8f201df25e55e268e5d619312131292e324d570
   extraPortMappings:
   - containerPort: 30080
     hostPort: 80
@@ -18,13 +18,13 @@ nodes:
     hostPort: 30000
     protocol: TCP
 - role: worker
-  image: kindest/node:v1.27.1@sha256:9915f5629ef4d29f35b478e819249e89cfaffcbfeebda4324e5c01d53d937b09
+  image: kindest/node:v1.29.0@sha256:eaa1450915475849a73a9227b8f201df25e55e268e5d619312131292e324d570
   extraPortMappings:
   - containerPort: 30000
     hostPort: 30001
     protocol: TCP
 - role: worker
-  image: kindest/node:v1.27.1@sha256:9915f5629ef4d29f35b478e819249e89cfaffcbfeebda4324e5c01d53d937b09
+  image: kindest/node:v1.29.0@sha256:eaa1450915475849a73a9227b8f201df25e55e268e5d619312131292e324d570
   extraPortMappings:
   - containerPort: 30000
     hostPort: 30002
