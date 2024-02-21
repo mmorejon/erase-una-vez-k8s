@@ -21,6 +21,9 @@ spec:
   containers:
     - name: message
       image: ghcr.io/mmorejon/erase-una-vez-1:v0.3.0
+      env:
+        - name: CHARACTER
+          value: "a red square."
 ---
 apiVersion: v1
 kind: Pod
@@ -34,6 +37,9 @@ spec:
   containers:
     - name: message
       image: ghcr.io/mmorejon/erase-una-vez-1:v0.3.0
+      env:
+        - name: CHARACTER
+          value: "a green triangle."
 ---
 apiVersion: v1
 kind: Pod
@@ -47,6 +53,9 @@ spec:
   containers:
     - name: message
       image: ghcr.io/mmorejon/erase-una-vez-1:v0.3.0
+      env:
+        - name: CHARACTER
+          value: "a yellow triangle."
 ---
 apiVersion: v1
 kind: Pod
@@ -60,6 +69,9 @@ spec:
   containers:
     - name: message
       image: ghcr.io/mmorejon/erase-una-vez-1:v0.3.0
+      env:
+        - name: CHARACTER
+          value: "a blue square."
 ---
 apiVersion: v1
 kind: Pod
@@ -73,3 +85,6 @@ spec:
   containers:
     - name: message
       image: ghcr.io/mmorejon/erase-una-vez-1:v0.3.0
+      env:
+        - name: CHARACTER
+          value: "a blue triangle."
