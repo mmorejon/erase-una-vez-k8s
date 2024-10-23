@@ -20,9 +20,9 @@ El cluster de Kubernetes utilizado en el libro cuenta con:
 
 ### Requisitos previos
 
-* Tener instalado [Docker](https://docs.docker.com/get-docker/)  `>= 24.0.7`
-* Tener instalado [Kubectl](https://kubernetes.io/docs/tasks/tools/) `1.31.0 `
-* Tener instalado [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) `v0.20.0`
+* Tener instalado [Docker](https://docs.docker.com/get-docker/)  `>= 27.2.0`
+* Tener instalado [Kubectl](https://kubernetes.io/docs/tasks/tools/) `1.31.1`
+* Tener instalado [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) `v0.24.0`
 
 ### Crear cluster
 
@@ -39,7 +39,7 @@ git clone https://github.com/mmorejon/erase-una-vez-k8s.git && \
 
   ```
   Creating cluster "book" ...
-  ✓ Ensuring node image (kindest/node:v1.29.0) 🖼
+  ✓ Ensuring node image (kindest/node:v1.31.1) 🖼
   ✓ Preparing nodes 📦 📦 📦
   ✓ Writing configuration 📜
   ✓ Starting control-plane 🕹️
