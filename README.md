@@ -39,7 +39,7 @@ git clone https://github.com/mmorejon/erase-una-vez-k8s.git && \
 
   ```
   Creating cluster "book" ...
-  ✓ Ensuring node image (kindest/node:v1.31.1) 🖼
+  ✓ Ensuring node image (kindest/node:v1.32.1) 🖼
   ✓ Preparing nodes 📦 📦 📦
   ✓ Writing configuration 📜
   ✓ Starting control-plane 🕹️
@@ -51,7 +51,7 @@ git clone https://github.com/mmorejon/erase-una-vez-k8s.git && \
 
   kubectl cluster-info --context kind-book
 
-  Have a nice day! 👋
+  Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/#community 🙂
   ```
 </details>
 
