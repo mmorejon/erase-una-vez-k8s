@@ -31,3 +31,10 @@ fi
 if [[ " ${args[*]} " == *" clean "* ]]; then
 ./bash/clean-cluster.sh
 fi
+# simulate node rotation
+if [[ " ${args[*]} " == *" simulate-node-rotation "* ]]; then
+kubectl drain book-worker --ignore-daemonsets --delete-emptydir-data
+kubectl uncordon book-worker
+kubectl drain book-worker2 --ignore-daemonsets --delete-emptydir-data
+kubectl uncordon book-worker2
+fi

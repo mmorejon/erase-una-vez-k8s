@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploy-example-3
+  name: deploy-example-6
   labels:
-    name: example-3
+    name: example-6
 spec:
   replicas: 3
   selector:
     matchLabels:
-      name: example-3
+      name: example-6
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -16,7 +16,7 @@ spec:
   template:
     metadata:
       labels:
-        name: example-3
+        name: example-6
     spec:
       containers:
         - image: ghcr.io/mmorejon/erase-una-vez-1:v0.3.0
@@ -24,3 +24,13 @@ spec:
           env:
             - name: CHARACTER
               value: "un elfo."
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: pdb-example-6
+spec:
+  minAvailable: 50%
+  selector:
+    matchLabels:
+      name: example-6
