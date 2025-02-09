@@ -5,15 +5,12 @@ metadata:
   labels:
     name: example-2
 spec:
-  replicas: 10
+  replicas: 3
   selector:
     matchLabels:
       name: example-2
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 10%
-      maxSurge: 10%
+    type: Recreate
   template:
     metadata:
       labels:

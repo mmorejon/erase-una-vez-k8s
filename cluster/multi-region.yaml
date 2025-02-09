@@ -19,13 +19,25 @@ nodes:
     protocol: TCP
 - role: worker
   image: kindest/node:v1.32.1@sha256:6afef2b7f69d627ea7bf27ee6696b6868d18e03bf98167c420df486da4662db6
+  labels:
+    region: east
   extraPortMappings:
   - containerPort: 30000
     hostPort: 30001
     protocol: TCP
 - role: worker
   image: kindest/node:v1.32.1@sha256:6afef2b7f69d627ea7bf27ee6696b6868d18e03bf98167c420df486da4662db6
+  labels:
+    region: east
   extraPortMappings:
   - containerPort: 30000
     hostPort: 30002
+    protocol: TCP
+- role: worker
+  image: kindest/node:v1.32.1@sha256:6afef2b7f69d627ea7bf27ee6696b6868d18e03bf98167c420df486da4662db6
+  labels:
+    region: west
+  extraPortMappings:
+  - containerPort: 30000
+    hostPort: 30003
     protocol: TCP
