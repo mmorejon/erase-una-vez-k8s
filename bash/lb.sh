@@ -18,6 +18,7 @@ fi
 # restart load balancer
 if [[ " ${args[*]} " == *" restart "* ]]; then
     ./bash/lb.sh stop
+    sleep 3
     ./bash/lb.sh start
 fi
 # check if load balancer is running
