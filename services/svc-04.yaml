@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: server-01
+  name: server-04
   labels:
-    app: server-01
+    app: server-04
+    example: fourth
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
-    app: server-01
+    app: server-04
   ports:
     - port: 8000
       protocol: TCP
@@ -16,18 +17,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server-01
+  name: server-04
   labels:
-    app: server-01
+    app: server-04
+    example: fourth
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: server-01
+      app: server-04
   template:
     metadata:
       labels:
-        app: server-01
+        app: server-04
+        example: fourth
     spec:
       containers:
         - name: server
