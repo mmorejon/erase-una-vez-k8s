@@ -2,6 +2,8 @@
 
 Repositorio de ejercicios y ejemplos utilizados en el libro [Érase una vez Kubernetes](https://leanpub.com/erase-una-vez-kubernetes).
 
+Translation: [English](README_en.md)
+
 ## ⚠️ Importante
 
 Ha sido cambiado el distribución del cluster utilizada en el libro de [Vagrant](https://www.vagrantup.com)+[Kubeadmin](https://kubernetes.io/docs/reference/setup-tools/kubeadm/) a [Kind](https://kind.sigs.k8s.io/). Se recomienda a los lectores a utilizar la distribución Kind. Las configuraciones utilizadas con Vagrant se encuentran en la rama [v1.x](https://github.com/mmorejon/erase-una-vez-k8s/tree/v1.x).
