@@ -3,9 +3,8 @@ kind: Namespace
 metadata:
   name: square
   labels:
-    example: third
+    name: example-3
     type: server
-
 ---
 apiVersion: v1
 kind: Pod
@@ -13,21 +12,20 @@ metadata:
   name: server
   namespace: square
   labels:
-    example: third
+    name: example-3
     type: server
 spec:
   containers:
     - name: server
-      image: ghcr.io/mmorejon/erase-una-vez-2:v0.3.0
+      image: ghcr.io/mmorejon/erase-una-vez-2:v0.5.0
       command:
         - server
       env:
         - name: CHARACTER
-          value: "un libro sobre Kubernetes."
+          value: "a Kubernetes book."
       ports:
         - name: http-server
           containerPort: 8000
-
 ---
 apiVersion: v1
 kind: Service
@@ -35,7 +33,7 @@ metadata:
   name: server
   namespace: square
   labels:
-    example: third
+    name: example-3
     type: server
 spec:
   type: ClusterIP
@@ -46,16 +44,14 @@ spec:
     port: 8000
     protocol: TCP
     targetPort: http-server
-
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: circle
   labels:
-    example: third
+    name: example-3
     type: client
-
 ---
 apiVersion: v1
 kind: Pod
@@ -63,18 +59,16 @@ metadata:
   name: client
   namespace: circle
   labels:
-    example: third
+    name: example-3
     type: client
 spec:
   containers:
     - name: client
-      image: ghcr.io/mmorejon/erase-una-vez-2:v0.3.0
+      image: ghcr.io/mmorejon/erase-una-vez-2:v0.5.0
       command:
         - client
       env:
-        - name: SERVER_URL
-          value: "http://server.square:8000"
         - name: ENDPOINT
-          value: "/echo"
+          value: "http://server.square:8000/echo"
         - name: SLEEP_TIME
           value: "3s"
