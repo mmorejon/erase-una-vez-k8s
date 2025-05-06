@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: erase-una-vez
   labels:
-    example: first
+    chapter: ns
