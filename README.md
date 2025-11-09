@@ -23,7 +23,7 @@ El cluster de Kubernetes utilizado en el libro cuenta con:
 ### Requisitos previos
 
 * Tener instalado [Docker](https://docs.docker.com/get-docker/)  `>= 27.2.0`
-* Tener instalado [Kubectl](https://kubernetes.io/docs/tasks/tools/) `1.31.1`
+* Tener instalado [Kubectl](https://kubernetes.io/docs/tasks/tools/) `1.34.1`
 * Tener instalado [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) `v0.30.0`
 
 ### Crear cluster
