@@ -11,8 +11,8 @@ Aquí tienes el *"qué"* (los manifiestos YAML y scripts), pero para entender el
 
 👇 **Consigue la edición actualizada 2025 aquí:** 👇
 
-[![Amazon](https://img.shields.io/badge/Amazon-Comprar_en_Tapa_Blanda-orange?style=for-the-badge&logo=amazon)]([TU_ENLACE_AMAZON](https://www.amazon.es/dp/8409212765))
-[![LeanPub](https://img.shields.io/badge/LeanPub-Descargar_Ebook-blue?style=for-the-badge&logo=leanpub)]([TU_ENLACE_LEANPUB](https://leanpub.com/erase-una-vez-kubernetes))
+[![Amazon](https://img.shields.io/badge/Amazon-Comprar_en_Tapa_Blanda-orange?style=for-the-badge&logo=amazon)](https://www.amazon.es/dp/8409212765)
+[![LeanPub](https://img.shields.io/badge/LeanPub-Descargar_Ebook-blue?style=for-the-badge&logo=leanpub)](https://leanpub.com/erase-una-vez-kubernetes)
 
 </div>
 
