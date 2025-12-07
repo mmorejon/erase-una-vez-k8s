@@ -56,7 +56,7 @@ Sigue estos pasos para tener tu laboratorio listo tal y como se describe en el *
 
 ### 1. Clonar el repositorio
 ```bash
-git clone [https://github.com/mmorejon/erase-una-vez-k8s.git](https://github.com/mmorejon/erase-una-vez-k8s.git)
+git clone https://github.com/mmorejon/erase-una-vez-k8s.git
 cd erase-una-vez-k8s
 ```
 
