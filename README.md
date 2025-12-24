@@ -91,13 +91,20 @@ kubectl cluster-info --context kind-book
 
 ---
 
-## 🤝 Comunidad y Soporte
+## 🤝 Comunidad y Feedback
 
-Este proyecto está vivo gracias a los lectores.
+Este proyecto está vivo gracias a los lectores. Como Leanpub no tiene un sistema de comentarios nativo, utilizamos este repositorio para centralizar la comunicación.
 
-1.  🐛 **¿Error en el código?** Abre un [Issue](https://github.com/mmorejon/erase-una-vez-k8s/issues) en este repositorio.
-2.  ⭐ **¿Te ha sido útil?** Dale una **estrella** al repositorio (arriba a la derecha). Nos ayuda a llegar a más ingenieros.
-3.  📚 **¿Aún no tienes el libro?**
+**¿Qué quieres hacer hoy?**
+
+| Tu objetivo | Dónde ir |
+| :--- | :--- |
+| 📣 **Dejar una reseña** | [**Ir a Discussions / Reseñas**](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/rese%C3%B1as-y-feedback) <br> *Cuéntanos qué te ha parecido el libro.* |
+| 💬 **Tengo una duda** | [**Ir a Discussions / Q&A**](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/q-a-preguntas-y-ayuda) <br> *Pregunta sobre conceptos, diagramas o ejercicios.* |
+| 💡 **Sugerir ideas** | [**Ir a Discussions / Ideas**](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/ideas-para-futuras-ediciones) <br> *Propón temas para futuros capítulos.* |
+| 🐛 **Reportar errata** | [**Abrir un Issue**](https://github.com/mmorejon/erase-una-vez-k8s/issues/new) <br> *Solo para typos o errores en el código.* |
+
+---
 
 <div align="center">
     <a href="https://www.amazon.es/dp/8409212765">
