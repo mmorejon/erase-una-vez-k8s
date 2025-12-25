@@ -32,7 +32,7 @@ spec:
         kubernetes.io/hostname: book-worker
       containers:
         - name: example-06
-          image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.0
+          image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: my-volume
