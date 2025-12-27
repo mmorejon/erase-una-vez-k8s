@@ -108,6 +108,9 @@ Este proyecto está vivo gracias a los lectores. Como Leanpub no tiene un sistem
 
 ---
 
+1.  ⭐ **¿Te ha sido útil?** Dale una **estrella** al repositorio (arriba a la derecha). Nos ayuda a llegar a más ingenieros.
+2.  📚 **¿Aún no tienes el libro?** Compra el libro en Amazon o Leanpub.
+
 <div align="center">
     <a href="https://www.amazon.es/dp/8409212765">
         <img src="https://img.shields.io/badge/Amazon-Ver_Precio_y_Opiniones-orange?style=flat-square&logo=amazon" />
