@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: pv-volume-02
   labels:
-    app: volume-06
+    app: volume-07
     type: local
 spec:
   storageClassName: ""
@@ -19,7 +19,7 @@ kind: PersistentVolume
 metadata:
   name: pv-volume-03
   labels:
-    app: volume-06
+    app: volume-07
     type: local
 spec:
   storageClassName: ""

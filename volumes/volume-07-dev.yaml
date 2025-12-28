@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: pv-claim-02
   labels:
-    app: volume-06
+    app: volume-07
 spec:
   storageClassName: ""
   accessModes:
@@ -15,23 +15,23 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: volume-06
+  name: volume-07
   labels:
-    app: volume-06
+    app: volume-07
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: volume-06
+      app: volume-07
   template:
     metadata:
       labels:
-        app: volume-06
+        app: volume-07
     spec:
       nodeSelector:
         kubernetes.io/hostname: book-worker
       containers:
-        - name: example-06
+        - name: example-07
           image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
           imagePullPolicy: IfNotPresent
           volumeMounts:
