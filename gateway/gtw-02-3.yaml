@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: ghcr.io/mmorejon/erase-una-vez-2:sha-fe484d21
+          image: ghcr.io/mmorejon/erase-una-vez-2:v0.5.0
           command:
             - server
           env:
@@ -99,7 +99,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: ghcr.io/mmorejon/erase-una-vez-2:sha-fe484d21
+          image: ghcr.io/mmorejon/erase-una-vez-2:v0.5.0
           command:
             - server
           env:
