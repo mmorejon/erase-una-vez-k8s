@@ -1,0 +1,28 @@
+title: "[Reseña] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por dedicar tiempo a dejar tu opinión! Tu feedback ayuda a otros lectores.
+
+  - type: dropdown
+    id: rating
+    attributes:
+      label: ¿Cómo calificarías el libro?
+      options:
+        - "⭐⭐⭐⭐⭐ Excelente - Imprescindible"
+        - "⭐⭐⭐⭐ Muy bueno - Me ayudó bastante"
+        - "⭐⭐⭐ Bueno - Cumple lo que promete"
+        - "⭐⭐ Regular - Esperaba otra cosa"
+        - "⭐ Malo - No me sirvió"
+    validations:
+      required: true
+
+  - type: textarea
+    id: review
+    attributes:
+      label: Tu opinión
+      description: Cuéntanos tu experiencia. ¿Te ayudó en algún proyecto real? ¿Aprobaste una certificación?
+      placeholder: Escribe aquí tu reseña...
+    validations:
+      required: true
