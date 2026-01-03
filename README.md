@@ -101,7 +101,7 @@ Este proyecto está vivo gracias a los lectores. Como Leanpub no tiene un sistem
 
 | Tu objetivo | Dónde ir |
 | :--- | :--- |
-| 📣 **Dejar una reseña** | [**Ir a Discussions / Reseñas**](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/rese%C3%B1as-y-feedback) <br> *Cuéntanos qué te ha parecido el libro.* |
+| 📣 **Dejar una reseña** | [**Ir a Discussions / Opiniones y Feedback**](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/opiniones-y-feedback) <br> *Cuéntanos qué te ha parecido el libro.* |
 | 💬 **Tengo una duda** | [**Ir a Discussions / Q&A**](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/q-a-preguntas-y-ayuda) <br> *Pregunta sobre conceptos, diagramas o ejercicios.* |
 | 💡 **Sugerir ideas** | [**Ir a Discussions / Ideas**](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/ideas-para-futuras-ediciones) <br> *Propón temas para futuros capítulos.* |
 | 🐛 **Reportar errata** | [**Abrir un Issue**](https://github.com/mmorejon/erase-una-vez-k8s/issues/new) <br> *Solo para typos o errores en el código.* |
