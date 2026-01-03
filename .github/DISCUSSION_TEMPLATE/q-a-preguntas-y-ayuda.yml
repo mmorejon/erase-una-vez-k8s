@@ -1,0 +1,49 @@
+title: "[Duda] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Hola! 👋
+        Nadie nace sabiendo Kubernetes. Estamos aquí para ayudarte a desbloquearte.
+        Por favor, rellena estos campos para que la comunidad pueda entender tu problema rápidamente.
+
+  - type: input
+    id: capitulo
+    attributes:
+      label: ¿Con qué capítulo o ejercicio está relacionada tu duda?
+      placeholder: Ej: Capítulo 4 (Pods), Laboratorio de Ingress...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Describe tu duda o problema
+      description: ¿Qué estabas intentando hacer? ¿Qué esperabas que ocurriera y qué ocurrió realmente?
+      placeholder: Estaba intentando levantar el pod del ejemplo, pero se queda en estado CrashLoopBackOff...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, Comandos o Manifiestos YAML
+      description: |
+        Por favor, pega aquí el error que te da la terminal o el YAML que estás usando.
+        ¡Es muy importante usar bloques de código para que se lea bien!
+      placeholder: |
+        $ kubectl get pods
+        NAME      READY   STATUS             RESTARTS   AGE
+        mi-pod    0/1     ImagePullBackOff   0          12s
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Entorno (Opcional)
+      description: Solo si es relevante (Ej. Estás en Windows, Mac M1, usas Kind v0.20...)
+      placeholder: Mac M2, Kind v0.20, Docker Desktop...
+    validations:
+      required: false
