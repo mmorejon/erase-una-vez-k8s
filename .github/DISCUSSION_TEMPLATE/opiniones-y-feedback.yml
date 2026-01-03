@@ -22,7 +22,7 @@ body:
     id: review
     attributes:
       label: Tu opinión
-      description: Cuéntanos tu experiencia. ¿Te ayudó en algún proyecto real? ¿Aprobaste una certificación?
+      description: Cuéntanos tu experiencia. ¿Aprendiste algo nuevo? ¿Te ayudó en algún proyecto real?
       placeholder: Escribe aquí tu reseña...
     validations:
       required: true
