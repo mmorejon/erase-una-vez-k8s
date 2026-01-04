@@ -21,9 +21,9 @@ spec:
           image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
           imagePullPolicy: IfNotPresent
           volumeMounts:
-            - name: my-volume
+            - name: files
               mountPath: /srv/erase-una-vez
       volumes:
-        - name: my-volume
+        - name: files
           hostPath:
             path: /tmp/erase-una-vez

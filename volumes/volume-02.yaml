@@ -19,7 +19,7 @@ spec:
           image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
           imagePullPolicy: IfNotPresent
           volumeMounts:
-            - name: my-volume
+            - name: files
               mountPath: /srv/erase-una-vez
         - name: container-02
           image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
@@ -28,8 +28,9 @@ spec:
             - name: SLEEP_TIME
               value: "2"
           volumeMounts:
-            - name: my-volume
+            - name: files
               mountPath: /srv/erase-una-vez
       volumes:
-        - name: my-volume
-          emptyDir: {}
+        - name: files
+          emptyDir:
+            sizeLimit: 10Mi
