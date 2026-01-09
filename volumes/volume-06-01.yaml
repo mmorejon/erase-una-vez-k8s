@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pv-claim-01
-  namespace: default
+  name: example-06
   labels:
-    app: volume-06
+    app: example-06
 spec:
-  storageClassName: ""
   accessModes:
     - ReadWriteOnce
+  storageClassName: standard
   resources:
     requests:
-      storage: 3Mi
+      storage: 100Mi

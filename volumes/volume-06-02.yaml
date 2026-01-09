@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-06
+  labels:
+    app: example-06
+spec:
+  containers:
+  - name: example-06
+    image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
+    volumeMounts:
+    - mountPath: "/srv/erase-una-vez"
+      name: files
+  volumes:
+  - name: files
+    persistentVolumeClaim:
+      claimName: example-06

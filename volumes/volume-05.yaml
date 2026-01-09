@@ -1,16 +1,30 @@
 apiVersion: v1
-kind: PersistentVolume
+kind: PersistentVolumeClaim
 metadata:
-  name: pv-volume-01
+  name: example-05
   labels:
-    app: volume-05
-    type: local
+    app: example-05
 spec:
-  storageClassName: ""
-  capacity:
-    storage: 5Mi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: "/tmp/pv-volume-01"
+  resources:
+    requests:
+      storage: 50Mi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-05
+  labels:
+    app: example-05
+spec:
+  containers:
+  - name: example-05
+    image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
+    volumeMounts:
+    - mountPath: "/srv/erase-una-vez"
+      name: files
+  volumes:
+  - name: files
+    persistentVolumeClaim:
+      claimName: example-05
