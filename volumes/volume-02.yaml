@@ -15,13 +15,13 @@ spec:
         app: volume-02
     spec:
       containers:
-        - name: container-01
+        - name: app-1
           image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: files
               mountPath: /srv/erase-una-vez
-        - name: container-02
+        - name: app-2
           image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
           imagePullPolicy: IfNotPresent
           env:

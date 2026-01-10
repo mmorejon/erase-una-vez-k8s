@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: example-05
+  name: volume-05
   labels:
-    app: example-05
+    app: volume-05
 spec:
   accessModes:
     - ReadWriteOnce
@@ -14,12 +14,12 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: example-05
+  name: volume-05
   labels:
-    app: example-05
+    app: volume-05
 spec:
   containers:
-  - name: example-05
+  - name: app
     image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
     volumeMounts:
     - mountPath: "/srv/erase-una-vez"
@@ -27,4 +27,4 @@ spec:
   volumes:
   - name: files
     persistentVolumeClaim:
-      claimName: example-05
+      claimName: volume-05

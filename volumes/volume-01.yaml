@@ -15,7 +15,7 @@ spec:
         app: volume-01
     spec:
       containers:
-        - name: example-01
+        - name: app
           image: ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
           imagePullPolicy: IfNotPresent
           volumeMounts:
