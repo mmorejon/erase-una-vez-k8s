@@ -22,11 +22,11 @@ Aquí tienes el *"qué"* (los manifiestos YAML y scripts), pero para entender el
 
 ## ⚡ Estado del Proyecto
 
-> **Actualización 2025:** Este repositorio se mantiene estrictamente actualizado. Hemos migrado el entorno de laboratorio de **Vagrant** a **Kind**. Ahora puedes levantar un cluster profesional en tu portátil en menos de 2 minutos, consumiendo menos RAM y alineado con los estándares modernos.
+> **Actualización 2026:** Este repositorio se mantiene estrictamente actualizado. Hemos migrado el entorno de laboratorio de **Vagrant** a **Kind**. Ahora puedes levantar un cluster profesional en tu portátil en menos de 2 minutos, consumiendo menos RAM y alineado con los estándares modernos.
 
 | Rama | Distribución | Estado |
 | :--- | :--- | :--- |
-| **`main` / `v2.x`** | **Kind (K8s v1.32)** | ✅ **Recomendada (Libro Actual)** |
+| **`main` / `v2.x`** | **Kind (K8s v1.35)** | ✅ **Recomendada (Libro Actual)** |
 | `v1.x` | VirtualBox + Vagrant | ⚠️ Legacy (Ediciones anteriores) |
 
 ---
@@ -36,7 +36,7 @@ Aquí tienes el *"qué"* (los manifiestos YAML y scripts), pero para entender el
 Para ejecutar los ejemplos sin errores, asegúrate de tener instaladas las siguientes herramientas:
 
 * **Docker** `>= 27.2.0`
-* **Kubectl** `>= 1.34.1`
+* **Kubectl** `>= 1.35.0`
 * **Kind** `>= v0.30.0` (Kubernetes in Docker)
 
 ---
@@ -75,7 +75,7 @@ Si todo ha ido bien, verás la inicialización de los nodos y el plano de contro
 
 ```text
 Creating cluster "book" ...
- ✓ Ensuring node image (kindest/node:v1.32.1) 🖼
+ ✓ Ensuring node image (kindest/node:v1.35.0) 🖼
  ✓ Preparing nodes 📦 📦 📦
  ✓ Writing configuration 📜
  ✓ Starting control-plane 🕹️
