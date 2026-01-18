@@ -14,7 +14,7 @@ Aquí tienes el *"qué"* (los manifiestos YAML y scripts), pero para entender el
 [![Amazon](https://img.shields.io/badge/Amazon-Comprar_en_Tapa_Blanda-orange?style=for-the-badge&logo=amazon)](https://www.amazon.es/dp/8409212765)
 [![LeanPub](https://img.shields.io/badge/LeanPub-Descargar_Ebook-blue?style=for-the-badge&logo=leanpub)](https://leanpub.com/erase-una-vez-kubernetes)
 [![GitHub Discussions](https://img.shields.io/github/discussions/mmorejon/erase-una-vez-k8s?label=Comunidad%20y%20Dudas&style=for-the-badge&color=blue)](https://github.com/mmorejon/erase-una-vez-k8s/discussions)
-[![Dejar Feedback](https://img.shields.io/badge/Reseñas-Deja%20tu%20opini%C3%B3n-ff69b4?style=for-the-badge&logo=github)](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/rese%C3%B1as-y-feedback)
+[![Dejar Feedback](https://img.shields.io/badge/Reseñas-Deja%20tu%20opini%C3%B3n-ff69b4?style=for-the-badge&logo=github)](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/opiniones-y-feedback)
 
 </div>
 
