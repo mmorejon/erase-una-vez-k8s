@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="./assets/book-cover.jpg" alt="Portada Libro Érase una vez Kubernetes" width="300"/>
+<img src="./assets/book-cover.jpg" alt="Portada Libro Érase una vez Kubernetes" width="700"/>
 
 ### El código fuente oficial para dominar Kubernetes v1.32+
 
