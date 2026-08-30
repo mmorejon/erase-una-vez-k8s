@@ -4,7 +4,7 @@
 
 <img src="./assets/book-cover.jpg" alt="Portada Libro Érase una vez Kubernetes" width="300"/>
 
-### El código fuente oficial para dominar Kubernetes v1.32+
+### El código fuente oficial para dominar Kubernetes v1.36+
 
 **Este repositorio contiene los laboratorios prácticos del libro.**
 Aquí tienes el *"qué"* (los manifiestos YAML y scripts), pero para entender el *"por qué"* (arquitectura, diseño y estrategia DevOps), necesitas la guía completa.
@@ -26,7 +26,7 @@ Aquí tienes el *"qué"* (los manifiestos YAML y scripts), pero para entender el
 
 | Rama | Distribución | Estado |
 | :--- | :--- | :--- |
-| **`main` / `v2.x`** | **Kind (K8s v1.35)** | ✅ **Recomendada (Libro Actual)** |
+| **`main` / `v2.x`** | **Kind (K8s v1.36)** | ✅ **Recomendada (Libro Actual)** |
 | `v1.x` | VirtualBox + Vagrant | ⚠️ Legacy (Ediciones anteriores) |
 
 ---
@@ -36,7 +36,7 @@ Aquí tienes el *"qué"* (los manifiestos YAML y scripts), pero para entender el
 Para ejecutar los ejemplos sin errores, asegúrate de tener instaladas las siguientes herramientas:
 
 * **Docker** `>= 27.2.0`
-* **Kubectl** `>= 1.35.0`
+* **Kubectl** `>= 1.36.0`
 * **Kind** `>= v0.30.0` (Kubernetes in Docker)
 
 ---
@@ -75,7 +75,7 @@ Si todo ha ido bien, verás la inicialización de los nodos y el plano de contro
 
 ```text
 Creating cluster "book" ...
- ✓ Ensuring node image (kindest/node:v1.35.0) 🖼
+ ✓ Ensuring node image (kindest/node:v1.36.1) 🖼
  ✓ Preparing nodes 📦 📦 📦
  ✓ Writing configuration 📜
  ✓ Starting control-plane 🕹️
