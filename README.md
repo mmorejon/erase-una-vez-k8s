@@ -1,8 +1,8 @@
-# 🏰 Érase una vez Kubernetes
+# Kubernetes: Érase una vez
 
 <div align="center">
 
-<img src="./assets/book-cover.jpg" alt="Portada Libro Érase una vez Kubernetes" width="300"/>
+<img src="./assets/book-cover.jpg" alt="Portada Libro Kubernetes: Érase una vez" width="300"/>
 
 ### El código fuente oficial para dominar Kubernetes v1.36+
 
