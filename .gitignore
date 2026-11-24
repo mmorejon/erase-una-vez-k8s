@@ -37,3 +37,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Copia local del libro para el tutor de IA
+book/*
+!book/LEEME.md
