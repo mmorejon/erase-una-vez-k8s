@@ -11,7 +11,8 @@
       "Bash(kubectl config get-contexts:*)",
       "Bash(kind get clusters)",
       "Bash(ke * ls*)",
-      "Bash(ke * --check*)"
+      "Bash(ke * --check*)",
+      "Bash(ke * activity * --lang *)"
     ],
     "deny": [
       "Bash(kubectl apply:*)",
