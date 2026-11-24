@@ -1,0 +1,43 @@
+title: "[Idea] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por ayudar a mejorar el libro! 💡
+        Cuéntanos qué contenido echas en falta o qué cambiarías. Las ideas se tienen en cuenta para las próximas ediciones.
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: "¿Qué tipo de idea es?"
+      options:
+        - "Contenido nuevo"
+        - "Cambio en el texto"
+        - "Cambio en el código"
+    validations:
+      required: true
+
+  - type: input
+    id: capitulo
+    attributes:
+      label: "¿Con qué capítulo está relacionada?"
+      placeholder: "Ej: Capítulo 14 (Secrets), o «ninguno» si es un tema nuevo"
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: "Tu idea"
+      description: "¿Qué falta o qué cambiarías, y por qué te sería útil?"
+      placeholder: "Me gustaría que el capítulo de Secrets explicara cómo guardarlos cifrados en Git con Sealed Secrets..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: "¿Cómo lo harías? (Opcional)"
+      description: "Un texto, un ejemplo o un fragmento de YAML con tu propuesta."
+    validations:
+      required: false
