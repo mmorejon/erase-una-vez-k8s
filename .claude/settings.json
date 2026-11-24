@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "Bash(kubectl logs:*)",
+      "Bash(kubectl explain:*)",
+      "Bash(kubectl version:*)",
+      "Bash(kubectl config current-context)",
+      "Bash(kubectl config get-contexts:*)",
+      "Bash(kind get clusters)",
+      "Bash(ke * ls*)",
+      "Bash(ke * --check*)"
+    ],
+    "deny": [
+      "Bash(kubectl apply:*)",
+      "Bash(kubectl create:*)",
+      "Bash(kubectl delete:*)",
+      "Bash(kubectl patch:*)",
+      "Bash(kubectl edit:*)",
+      "Bash(kubectl scale:*)",
+      "Bash(kubectl exec:*)",
+      "Bash(kubectl label:*)",
+      "Bash(kubectl annotate:*)",
+      "Bash(kubectl replace:*)",
+      "Bash(kubectl drain:*)",
+      "Bash(kubectl cordon:*)",
+      "Bash(kubectl uncordon:*)",
+      "Bash(kubectl run:*)",
+      "Bash(kubectl expose:*)",
+      "Bash(kubectl set:*)",
+      "Bash(kubectl taint:*)",
+      "Bash(kubectl autoscale:*)",
+      "Bash(kubectl rollout restart:*)",
+      "Bash(kubectl rollout undo:*)",
+      "Bash(kubectl config use-context:*)",
+      "Bash(kubectl config set-context:*)",
+      "Bash(kubectl config delete-context:*)",
+      "Bash(bash/cluster.sh:*)",
+      "Bash(./bash/cluster.sh:*)",
+      "Bash(bash bash/cluster.sh:*)",
+      "Bash(kind create:*)",
+      "Bash(kind delete:*)",
+      "Bash(ke * --clean*)",
+      "Bash(ke * --raw-answer*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-kind-context.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
