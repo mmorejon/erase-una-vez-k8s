@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💡 Ideas para futuras ediciones"
+    url: https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/ideas-para-futuras-ediciones
+    about: "Contenido que echas en falta o cambios que propones en el texto o el código."
+  - name: "❓ Preguntas y ayuda"
+    url: https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/q-a-preguntas-y-ayuda
+    about: "Dudas sobre los ejercicios o problemas con tu entorno."

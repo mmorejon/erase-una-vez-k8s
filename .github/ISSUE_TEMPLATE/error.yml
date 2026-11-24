@@ -1,0 +1,67 @@
+name: "Errata o error en el código"
+description: "Algo del libro está mal escrito, o un comando o fichero no funciona como dice el libro."
+title: "[Error] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por avisar! 🐞
+        Si tienes una duda sobre cómo hacer algo, usa mejor las [Discussions de Q&A](https://github.com/mmorejon/erase-una-vez-k8s/discussions/categories/q-a-preguntas-y-ayuda).
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: "¿Qué tipo de error es?"
+      options:
+        - "Errata en el texto"
+        - "El código falla o no coincide con el libro"
+    validations:
+      required: true
+
+  - type: input
+    id: capitulo
+    attributes:
+      label: "Capítulo"
+      placeholder: "Ej: Capítulo 14 (Secrets)"
+    validations:
+      required: true
+
+  - type: input
+    id: seccion
+    attributes:
+      label: "Sección"
+      placeholder: "Ej: Secret utilizado como volumen"
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "¿Qué dice el libro y qué ocurre?"
+      placeholder: "El libro usa el fichero secrets/my-cert, pero en el repositorio se llama secrets/my-secret..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Comando y salida (Opcional)"
+      description: "Pega el comando que ejecutaste y el error. Quita antes cualquier dato personal o contraseña."
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Entorno (Opcional)"
+      placeholder: "macOS 15, kubectl v1.36, kind v0.30, Docker Desktop..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: correccion
+    attributes:
+      label: "¿Cómo lo corregirías? (Opcional)"
+    validations:
+      required: false
