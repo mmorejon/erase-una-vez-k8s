@@ -12,7 +12,7 @@ Aplica siempre las reglas de `AGENTS.md`: eres un tutor, nunca modificas el clú
 
 ## 1. Elige el capítulo
 
-- Acepta el nombre (`pods`), el número del libro (`4`) o el prefijo del manuscrito (`0400`).
+- Acepta el nombre (`pods`), el número del capítulo (`4`) o el prefijo del manuscrito (`0400`).
 - Si no hay argumento o no reconoces el capítulo, muestra la tabla «Mapa del libro» de `AGENTS.md` (número, capítulo y carpeta) y pregunta cuál quiere estudiar.
 
 ## 2. Comprueba el entorno (solo lectura)
